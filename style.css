@@ -8,7 +8,17 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Header */
+a {
+    color: #f39c12;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+/* Header Navigation */
 header {
     background: #333;
     color: #fff;
@@ -22,15 +32,16 @@ header {
 header ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Spread navigation items */
     margin: 0;
-    padding: 0;
+    padding: 0 2rem; /* Add padding to the sides */
 }
 
 header ul li a {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
+    text-align: center; /* Centers text inside menu items */
 }
 
 header ul li a:hover {
@@ -40,17 +51,22 @@ header ul li a:hover {
 /* Hero Section */
 #hero {
     display: flex;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
     padding: 4rem 2rem;
+    margin-top: 4rem; /* Space below the fixed navigation bar */
     background: linear-gradient(120deg, #f39c12, #f1c40f);
     color: #fff;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+#hero h1, #hero p {
+    text-align: left; /* Ensure text is aligned left */
+    margin: 0;
+}
+
+.intro {
+    max-width: 800px; /* Ensures readable line length */
 }
 
 .profile-pic {
@@ -65,6 +81,139 @@ header ul li a:hover {
     margin-top: 1rem;
 }
 
+/* Sections */
+section {
+    padding: 2rem;
+    text-align: left; /* Ensures left alignment for all sections */
+    max-width: 1200px; /* Keeps content width readable */
+    margin: 0 auto; /* Center the section horizontally */
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for sections */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section */
+#about ul {
+    list-style: disc;
+    margin: 1rem 0;
+    padding-left: 2rem; /* Indents the bullet points */
+    text-align: left; /* Ensures bullet points align left */
+}
+
+.button {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #f39c12;
+}
+
+/* Work Experience */
+.job {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.job h3 {
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+}
+
+.job ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align job descriptions left */
+}
+
+.job ul li {
+    margin: 0.5rem 0;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+}
+
+.project {
+    background: #fff;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contact button {
+    background: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#contact button:hover {
+    background: #f39c12;
+}
+
 /* Section Separators */
 .section-separator {
     width: 100%;
@@ -73,15 +222,38 @@ header ul li a:hover {
     margin: 2rem 0;
 }
 
-/* Sections */
-section {
-    padding: 2rem;
-}
-
 /* Footer */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #d35400;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center; /* Center-aligns text for smaller screens */
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr; /* Single-column layout on small screens */
+    }
 }
