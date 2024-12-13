@@ -69,12 +69,19 @@ header ul li a:hover {
     max-width: 800px; /* Ensures readable line length */
 }
 
+.creative-font {
+    font-family: 'Playfair Display', serif; /* Adds creative font for the intro */
+    font-size: 1.5rem;
+    color: #444;
+}
+
 .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     background-color: #ddd;
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
 }
 
 .goal {
@@ -127,6 +134,12 @@ section h3 {
 
 .button:hover {
     background: #f39c12;
+}
+
+/* Skills Section */
+#skills p {
+    margin: 1rem 0;
+    line-height: 1.8;
 }
 
 /* Work Experience */
@@ -188,16 +201,17 @@ section h3 {
     margin: 0 auto;
 }
 
-#contact label {
-    font-weight: bold;
+#contact .form-group {
+    display: flex;
+    flex-direction: column;
 }
 
 #contact input,
 #contact textarea {
-    width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 100%;
 }
 
 #contact button {
