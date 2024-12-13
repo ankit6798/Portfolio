@@ -3,14 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -19,14 +19,11 @@ header {
 
 header ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-}
-
-header ul li {
-    display: inline;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 header ul li a {
@@ -35,37 +32,102 @@ header ul li a {
     font-weight: bold;
 }
 
+header ul li a:hover {
+    color: #f39c12;
+}
+
 /* Hero Section */
-.hero {
-    background: #f4f4f4;
+#hero {
+    background: linear-gradient(120deg, #f39c12, #f1c40f);
+    color: white;
     text-align: center;
     padding: 5rem 1rem;
-    margin-top: 4rem; /* To account for the fixed header */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+#hero h1 {
+    font-size: 3rem;
+    margin: 0;
 }
 
-/* Section Styling */
+#hero p {
+    font-size: 1.5rem;
+}
+
+/* Section Styles */
 section {
-    padding: 2rem;
-    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-#projects .project {
-    background: #eaeaea;
-    margin: 1rem auto;
+#about ul {
+    list-style: disc;
+    margin: 1rem 0;
+}
+
+.button {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #f39c12;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project {
+    background: #fff;
     padding: 1rem;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    max-width: 600px;
+    transition: transform 0.3s;
 }
 
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f39c12;
+}
+
+/* Footer */
 footer {
     background: #333;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
 }
