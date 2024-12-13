@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit Pathange Portfolio</title>
+    <title>Ankit Pathange - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -20,49 +21,70 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Hi, I'm Ankit Pathange</h1>
+    <section id="hero">
+        <h1>Ankit Pathange</h1>
         <p>Business Intelligence Engineer</p>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>
-            I'm a Business Intelligence Engineer with expertise in data analytics, visualization, and cloud technologies.
-            Currently pursuing my Master's in IT and Management at the University of Texas at Dallas.
-        </p>
+        <p>Masters in Science, IT and Management at UTD | Bachelor of Technology - Computer Science at PES University</p>
         <h3>Skills</h3>
         <ul>
             <li>Business Intelligence: Tableau, Power BI, Looker</li>
             <li>Data Analytics: SQL, Python, R, BigQuery</li>
             <li>Cloud Platforms: AWS, Azure, Google Cloud</li>
         </ul>
+        <a href="path/to/resume.pdf" class="button">Download Resume</a>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="job">
+            <h3>Sagent LLC</h3>
+            <p>Business Intelligence Developer Intern (June 2024 - Aug 2024)</p>
+            <p>Key Achievements: Increased data processing efficiency by 25%, developed Power BI dashboards.</p>
+        </div>
+        <div class="job">
+            <h3>PwC India</h3>
+            <p>Technology Consultant (Sep 2020 - Jul 2023)</p>
+            <p>Key Achievements: Designed KPI dashboards, engineered ETL pipelines, and collaborated with stakeholders.</p>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>NYC Taxi Price Prediction</h3>
-            <p>Developed predictive models to optimize pricing strategies and fleet allocation.</p>
-        </div>
-        <div class="project">
-            <h3>Meat Substitute Market Analysis</h3>
-            <p>Created data-driven strategies for market growth, boosting performance by 15%.</p>
+        <div class="project-grid">
+            <div class="project">
+                <h3>NYC Taxi Price Prediction</h3>
+                <p>Developed predictive models to optimize taxi pricing strategies and fleet allocation.</p>
+            </div>
+            <div class="project">
+                <h3>Meat Substitute Market Analysis</h3>
+                <p>Created data-driven strategies for market growth, boosting performance by 15%.</p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:ankit.pathange@utdallas.edu">ankit.pathange@utdallas.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ankitpathange">linkedin.com/in/ankitpathange</a></p>
-        <p>GitHub: <a href="https://github.com/ankit6798">github.com/ankit6798</a></p>
+        <form action="mailto:ankit.pathange@utdallas.edu" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <p>&copy; 2024 Ankit Pathange</p>
+        <p>&copy; 2024 Ankit Pathange | <a href="https://github.com/ankit6798">GitHub</a> | <a href="https://linkedin.com/in/ankitpathange">LinkedIn</a></p>
     </footer>
 </body>
 </html>
