@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ankit Pathange - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -13,6 +13,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -24,11 +25,11 @@
     <section id="hero">
         <div class="hero-content">
             <div class="image-placeholder">
-                <img src="path/to/your-image.jpg" alt="Your Image" class="profile-pic">
+                <img src="images/your-image.jpg" alt="Your Profile Picture" class="profile-pic">
             </div>
             <div class="intro">
                 <h1>Ankit Pathange</h1>
-                <p>Business Intelligence Engineer</p>
+                <p class="creative-font">Business Intelligence Engineer</p>
                 <p class="goal">I am passionate about leveraging data to drive actionable insights and innovative solutions. My career goal is to excel as a Business Intelligence professional, helping organizations make data-driven decisions efficiently.</p>
             </div>
         </div>
@@ -40,18 +41,24 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Masters in Science, IT and Management at UTD | Bachelor of Technology - Computer Science at PES University</p>
-        <h3>Skills</h3>
-        <ul>
-            <li>Business Intelligence: Tableau, Power BI, Looker</li>
-            <li>Data Analytics: SQL, Python, R, BigQuery</li>
-            <li>Cloud Platforms: AWS, Azure, Google Cloud</li>
-        </ul>
         <a href="path/to/resume.pdf" class="button">Download Resume</a>
     </section>
 
     <div class="section-separator"></div>
 
-    <!-- Work Experience Section -->
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <p><strong>Business Intelligence & Marketing:</strong> Tableau, Power BI, Looker, Domo, Excel, Google Analytics, MS-Access, Adobe Analytics, Grafana, Appsflyer</p>
+        <p><strong>Data Analytics & Warehousing:</strong> SQL, Python, BigQuery, R, C/C++, SAS, PostgreSQL, Snowflake, Spark, Hadoop</p>
+        <p><strong>Cloud Technologies:</strong> AWS Services, Microsoft Azure, Google Cloud Platform</p>
+        <p><strong>Soft Skills:</strong> Collaboration, Problem-Solving, Adaptability, Strategic Planning, Decision Making, Communication, Time-Management</p>
+        <p><strong>Project Management:</strong> Agile, Scrum, Jira, Stakeholder Management, Requirements Gathering, Business Analysis, Process Improvement</p>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Experience Section -->
     <section id="experience">
         <h2>Work Experience</h2>
         <div class="job">
@@ -63,15 +70,7 @@
                 <li>Collaborated with stakeholders to gather requirements and delivered actionable insights.</li>
             </ul>
         </div>
-        <div class="job">
-            <h3>PwC India</h3>
-            <p><strong>Technology Consultant (Sep 2020 - Jul 2023)</strong></p>
-            <ul>
-                <li>Designed KPI dashboards, engineered ETL pipelines, and improved data accuracy by 10%.</li>
-                <li>Implemented advanced data cleansing techniques, enhancing business intelligence reports by 25%.</li>
-                <li>Led project management and SQL development for major telecom and FMCG clients.</li>
-            </ul>
-        </div>
+        <!-- Add more jobs here as needed -->
     </section>
 
     <div class="section-separator"></div>
@@ -88,6 +87,14 @@
                 <h3>Meat Substitute Market Analysis</h3>
                 <p>Created data-driven strategies for market growth, boosting performance by 15%.</p>
             </div>
+            <div class="project">
+                <h3>Operation Analytics</h3>
+                <p>Forecasted taxi demand and fare prices using Random Forest models, achieving R² of 93.48% for demand prediction.</p>
+            </div>
+            <div class="project">
+                <h3>Search Engine Optimization</h3>
+                <p>Analyzed SEO strategies for leading brands like Zillow and Amazon Fresh, delivering actionable insights to improve rankings and engagement.</p>
+            </div>
         </div>
     </section>
 
@@ -97,12 +104,18 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <form action="mailto:ankit.pathange@utdallas.edu" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
             <button type="submit">Send Message</button>
         </form>
     </section>
